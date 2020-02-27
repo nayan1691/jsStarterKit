@@ -7,12 +7,13 @@ System.register(["single-spa"], function (_export, _context) {
     return prefixes.some(prefix => location.href.indexOf(`${location.origin}/${prefix}`) !== -1);
   }
 
-  function it(location) {
+  function navbar(location) {
     return true;
-  } // function people(location) {
-  //   return prefix(location, 'people')
-  // }
+  }
 
+  function it(location) {
+    return prefix(location, 'it');
+  }
 
   function vat(location) {
     return prefix(location, 'vat');
@@ -23,8 +24,8 @@ System.register(["single-spa"], function (_export, _context) {
       singleSpa = _singleSpa;
     }],
     execute: function () {
-      singleSpa.registerApplication('it', () => System.import('it'), it); // singleSpa.registerApplication('people', () => SystemJS.import('@portal/people'), isActive.people)
-
+      singleSpa.registerApplication('navbar', () => System.import('navbar'), navbar);
+      singleSpa.registerApplication('people', () => System.import('it'), it);
       singleSpa.registerApplication('vat', () => System.import('vat'), vat);
       singleSpa.start();
     }
