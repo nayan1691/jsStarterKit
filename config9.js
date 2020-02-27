@@ -23,9 +23,9 @@ System.register(["single-spa"], function (_export, _context) {
       singleSpa = _singleSpa;
     }],
     execute: function () {
-      singleSpa.registerApplication('it', () => SystemJS.import('it'), it); // singleSpa.registerApplication('people', () => SystemJS.import('@portal/people'), isActive.people)
+      singleSpa.registerApplication('it', () => System.import('it'), it); // singleSpa.registerApplication('people', () => SystemJS.import('@portal/people'), isActive.people)
 
-      singleSpa.registerApplication('vat', () => SystemJS.import('vat'), vat);
+      singleSpa.registerApplication('vat', () => System.import('vat'), vat);
       singleSpa.start();
     }
   };
