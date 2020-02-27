@@ -8,7 +8,8 @@ System.register(["single-spa"], function (_export, _context) {
     }],
     execute: function () {
       singleSpa.registerApplication('vat', () => SystemJS.import('vat'), location => location.pathname.startsWith('/vat'));
-      singleSpa.registerApplication('it', () => SystemJS.import('it'), location => location.pathname.startsWith('/'));
+      singleSpa.registerApplication('it', () => SystemJS.import('it'), location => location.pathname.startsWith('/it'));
+      singleSpa.registerApplication('header', () => SystemJS.import('header'), location => location.pathname.startsWith('/'));
       singleSpa.start();
     }
   };
