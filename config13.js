@@ -25,7 +25,7 @@ System.register(["single-spa"], function (_export, _context) {
     }],
     execute: function () {
       singleSpa.registerApplication('@react-mf/navbar', () => System.import('@react-mf/navbar'), navbar);
-      singleSpa.registerApplication('people', () => System.import('it'), it);
+      singleSpa.registerApplication('it', () => System.import('it'), it);
       singleSpa.registerApplication('vat', () => System.import('vat'), vat);
       singleSpa.start();
     }
